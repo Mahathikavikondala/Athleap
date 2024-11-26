@@ -1,0 +1,329 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+.hero-container {
+background-image: url(../components/indeximg/sports.jpg);
+background-size: cover;
+background-position: center;
+height: 100vh;  /* Full viewport height */
+width: 100vw;  /* Full viewport width */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero-header {
+width: 100%;
+padding: 20px;
+background: rgba(0, 0, 0, 0.6);  /* Darker semi-transparent background */
+display: flex;
+justify-content: center; /* Center the header */
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.hero-header h1 {
+margin: 0;
+font-size: 2em;
+text-align: center;
+flex: 1;
+}
+
+.hero-header nav ul {
+list-style-type: none;
+padding: 0;
+display: flex;
+justify-content: center;
+margin: 0;
+}
+
+.hero-header nav ul li {
+margin: 0 20px;
+position: relative; /* Position for dropdown */
+}
+
+.hero-header nav ul li a {
+color: white;
+text-decoration: none;
+font-size: 1.2em;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+
+position: absolute;
+background-color: rgba(0, 0, 0, 0.8);
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+text-align: left;
+}
+
+.dropdown-content a {
+color: white;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+
+}
+
+.dropdown-content a:hover {
+background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+/* display: block; */
+color:#000;
+}
+
+.welcome-content {
+    background-image: url(../components/indeximg/sports.jpg);
+max-width: 100%;  /* Adjust based on how much width you want to use */
+padding: 356px; /* Adjust for spacing below header */
+/*background-color: rgba(0, 0, 0, 0.6);  Slight background to enhance readability */
+border-radius: 10px;
+}
+
+.welcome-content h1 {
+    margin-top: -10%;
+    margin-left: 30%;
+font-size: 3em;
+font-style:italic;  /* Larger font size */
+color: #f6f5f5;
+}
+
+.welcome-content p {
+    margin-left: 30%;
+font-size: 1.5em;
+font-style: italic;
+color: white;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Title styling */
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Carousel inner elements */
+.carousel-inner .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Carousel indicators */
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-indicators li {
+    background-color: #888;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+.carousel-indicators .active {
+    background-color: #555;
+}
+
+/* Carousel controls */
+.carousel-control {
+    width: 5%;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+
+.carousel-control.left span, .carousel-control.right span {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+
+    .carousel-control.left, .carousel-control.right {
+        width: 10%;
+    }
+}
+
+.star-products {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.product {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+#jim {
+position: fixed;
+bottom: 100px;
+right: 20px;
+width: 100px;
+height: 100px;
+background-image: url(../components/indeximg/jim1.jpg);
+background-size: cover;
+cursor: pointer;
+transition: all 0.3s ease;
+z-index: 1000;
+}
+
+.chatbot {
+display: none; /* Initially hidden */
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 300px;
+background: white;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+z-index: 1000;
+}
+
+.chat-header {
+background: #007bff;
+color: white;
+padding: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.close-btn {
+background: transparent;
+border: none;
+color: white;
+font-size: 20px;
+cursor: pointer;
+}
+
+.chat-container {
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+
+.chat-messages {
+flex-grow: 1;
+padding: 10px;
+overflow-y: auto;
+max-height: 300px;
+}
+
+.chat-messages .message {
+margin: 5px 0;
+}
+
+.chat-messages .message.user {
+text-align: right;
+color: #007bff;
+}
+
+.chat-messages .message.bot {
+text-align: left;
+color: #000;
+}
+
+input#user-input {
+padding: 10px;
+border: none;
+border-top: 1px solid #ddd;
+width: 100%;
+box-sizing: border-box;
+}
+
+button {
+padding: 10px;
+background: #007bff;
+color: white;
+border: none;
+width: 100%;
+cursor: pointer;
+}
+
+button:hover {
+background: #0056b3;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-content p {
+    margin: 0;
+}
+.footer-content a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+.footer-content a:hover {
+    text-decoration: underline;
+}
+.social-icons {
+    margin-top: 10px;
+}
+.social-icons a {
+    margin: 0 10px;
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 24px; /* Adjust icon size */
+}
+.social-icons a:hover {
+    color: #ddd;
+}

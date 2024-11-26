@@ -1,0 +1,80 @@
+.body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    width: 80%;
+    height: 60%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .image-section {
+    flex: 1;
+    background-image: url(../../public/jimwelcome.jpg);
+    background-size: cover;
+  }
+  
+  .login-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f2a38; /* Denim-like background */
+  }
+  
+  .login-card {
+    background-color: #020e1f; /* Denim-like background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .login-card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .login-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .login-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #045ef9; /* Slightly lighter denim shade */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-card button:hover {
+    background-color: #2a4a77; /* Darker denim shade */
+  }
+  
+  .login-card a {
+    color: #67a1e9; /* Light blue for links */
+    text-decoration: none;
+  }
+  
+  .login-card a:hover {
+    text-decoration: underline;
+  }
+  
